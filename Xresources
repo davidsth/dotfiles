@@ -1,0 +1,81 @@
+
+! ----------------------------------------------------------------------------
+! file:     ~/.Xresources
+!
+!vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+! ----------------------------------------------------------------------------
+
+! Xcursor --------------------------------------------------------------------
+
+Xcursor*theme:  Vanilla-DMZ
+Xcursor.size:   22
+
+
+! terminal colors ------------------------------------------------------------
+
+! A tango-esque light theme
+
+*foreground:#a0a0a0
+*background:#1B1D1E
+
+!black
+*color0:    #1B1D1E
+*color8:    #505354
+!red
+*color1:    #F92672
+*color9:    #FF669D
+!green
+*color2:    #A6E22E
+*color10:   #BEED5F
+!yellow
+*color3:    #FD971F
+*color11:   #E6DB74
+!blue
+*color4:    #66D9EF
+*color12:   #66D9EF
+!magenta
+*color5:    #9E6FFE
+*color13:   #9E6FFE
+!cyan
+*color6:    #5E7175
+*color14:   #A3BABF
+!white
+*color7:    #CCCCC6
+*color15:   #F8F8F2
+
+
+! rxvt-unicode ---------------------------------------------------------------
+
+!for normal X11 fonts:
+URxvt*font:		xft:ProFont:size=9:antialias=false
+!URxvt*font:       xft:ProggyCleanTT:size=12:antialias=false
+URxvt*boldFont:	xft:ProFont:size=9:antialias=false
+!urxvt*font:     -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+!rxvt*boldFont:  -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
+
+urxvt*geometry:         75x28
+urxvt*depth:            28
+urxvt*transparent:      false
+urxvt*internalBorder:   2
+urxvt*fading:           0
+urxvt*shading:          10
+urxvt*tintColor:        #000000
+urxvt*cursorColor:      #FD971F
+urxvt*inheritPixmap:    false
+urxvt*saveLines:        32767
+urxvt*visualBell:       true
+urxvt*scrollTtyKeypress:true
+urxvt*scrollWithBuffer: false
+urxvt*scrollTtyOutput:  false
+urxvt*scrollBar:        false
+urxvt*loginShell:       true
+urxvt*cutchars:         "()*,<>[]{}|"
+urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+urxvt*secondaryScroll:  true
+urxvt*mapAlert:         true
+urxvt*utmpInhibit:      true
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  option-popup,matcher
+urxvt*urlLauncher:      /usr/bin/firefox
+urxvt*matcher.button:   1
+urxvt*background:      rgba:2222/2222/2222/dddd
