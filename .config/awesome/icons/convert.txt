@@ -1,0 +1,1 @@
+for x in *.png; do convert -fill "#426797" -transparent white -colorize 100 -bordercolor transparent -gravity center "${x}" "${x%.*}.png"; done
