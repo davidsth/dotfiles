@@ -2,7 +2,6 @@
 ! ----------------------------------------------------------------------------
 ! file:     ~/.Xresources
 !
-!vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 ! ----------------------------------------------------------------------------
 
 ! Xcursor --------------------------------------------------------------------
@@ -47,9 +46,12 @@ Xcursor.size:   22
 ! rxvt-unicode ---------------------------------------------------------------
 
 !for normal X11 fonts:
-URxvt*font:		xft:ProFont:size=9:antialias=false
+URxvt*font:			xft:Tewi:bold:size=17:antialias=false
+!URxvt*imFont:		xft:Monaco for Powerline:regular:size=8
+URxvt*boldFont:		xft:Tewi:bold:size=17:antialias=false
+!URxvt*italicFont:	xft:Monaco for Powerline:italic:size=8
+!URxvt*boldItalicFont: xft:Monaco for Powerline:bold:italic:size=8
 !URxvt*font:       xft:ProggyCleanTT:size=12:antialias=false
-URxvt*boldFont:	xft:ProFont:size=9:antialias=false
 !urxvt*font:     -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 !rxvt*boldFont:  -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 
@@ -63,7 +65,7 @@ urxvt*tintColor:        #000000
 urxvt*cursorColor:      #FD971F
 urxvt*inheritPixmap:    false
 urxvt*saveLines:        32767
-urxvt*visualBell:       true
+urxvt*visualBell:       false
 urxvt*scrollTtyKeypress:true
 urxvt*scrollWithBuffer: false
 urxvt*scrollTtyOutput:  false
