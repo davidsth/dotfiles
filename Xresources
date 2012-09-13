@@ -14,8 +14,8 @@ Xcursor.size:   22
 
 ! A tango-esque light theme
 
-*foreground:#a0a0a0
-*background:#1B1D1E
+*foreground:#AFBCCC
+*background:#191C1F
 
 !black
 *color0:    #1B1D1E
@@ -30,8 +30,9 @@ Xcursor.size:   22
 *color3:    #FD971F
 *color11:   #E6DB74
 !blue
-*color4:    #66D9EF
-*color12:   #66D9EF
+*color4:    #45709C
+*color12:	#75BAFF   
+!#66D9EF
 !magenta
 *color5:    #9E6FFE
 *color13:   #9E6FFE
@@ -46,25 +47,24 @@ Xcursor.size:   22
 ! rxvt-unicode ---------------------------------------------------------------
 
 !for normal X11 fonts:
-URxvt*font:			xft:Tewi:bold:size=17:antialias=false
+URxvt*font:			xft:Tewi:bold:size=11:antialias=false
 !URxvt*imFont:		xft:Monaco for Powerline:regular:size=8
-URxvt*boldFont:		xft:Tewi:bold:size=17:antialias=false
+URxvt*boldFont:		xft:Tewi:bold:size=11:antialias=false
 !URxvt*italicFont:	xft:Monaco for Powerline:italic:size=8
 !URxvt*boldItalicFont: xft:Monaco for Powerline:bold:italic:size=8
 !URxvt*font:       xft:ProggyCleanTT:size=12:antialias=false
 !urxvt*font:     -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
-!rxvt*boldFont:  -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 
 urxvt*geometry:         75x28
 urxvt*depth:            28
 urxvt*transparent:      false
-urxvt*internalBorder:   2
+urxvt*internalBorder:  	1 
 urxvt*fading:           0
 urxvt*shading:          10
 urxvt*tintColor:        #000000
 urxvt*cursorColor:      #FD971F
 urxvt*inheritPixmap:    false
-urxvt*saveLines:        32767
+urxvt*saveLines:        10000
 urxvt*visualBell:       false
 urxvt*scrollTtyKeypress:true
 urxvt*scrollWithBuffer: false
