@@ -6,8 +6,6 @@ require("awful.rules")
 require("beautiful")
 -- Notification library
 require("naughty")
---require("obvious")
-local vicious = require("vicious")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -35,42 +33,20 @@ end
 -- }}}
 
 -- {{{ Variable definitions
-
--- colors
-blue = "#426797"
-white = "#ffffff"
-black = "#0a0a0b"
-red = "#ea3da3"
-green = "#16a712"
-grey = "#6d7c80"
-
---path
-icons		= "/home/lockon/.config/awesome/icons/newblue/"
-iconsmenu	= "/home/lockon/.config/awesome/icons/menu/"
-
 -- Themes define colours, icons, and wallpapers
-beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
+beautiful.init("/home/lockon/.config/awesome/themes/default/theme.lua")
 
--- Standard programs
+-- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
-browser = "firefox"
-fm = "pcmanfm"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
---alias
-exec	= awful.util.spawn
---sexec	= awful.util.spawn_with_shell
 -- Default modkey.
+-- Usually, Mod4 is the key with a logo between Control and Alt.
+-- If you do not like this or do not have such a key,
+-- I suggest you to remap Mod4 to another key using xmodmap or other tools.
+-- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
-
---mixed
-tagseparator	= true
-space			= 40
-widthMpd		= 340
-useMpd			= true
-usePanel		= true
-gmailiconchange = nil
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
@@ -85,35 +61,21 @@ layouts =
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
-	awful.layout.suit.floating,
+    awful.layout.suit.max.fullscreen,
+    awful.layout.suit.magnifier
 }
 -- }}}
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
-tags = {
-	names	= { "main", "web", "dev", "home", "msg"},
-	layout	= { layouts[11],layouts[11],layouts[8],layouts[8],layouts[2]},
-	icons	= { nil, icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png"}
-}
-
- 
+tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag(tags.names, s, tags.layout)
-
-    if tagseparator then
-		for i, t in ipairs(tags[s]) do
-	    	awful.tag.seticon(tags.icons[i], t)
-		end
-    end
-    
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
+-- }}}
 
-
--- }
-
---  Menu
+-- {{{ Menu
 -- Create a laucher widget and a main menu
 myawesomemenu = {
    { "manual", terminal .. " -e man awesome" },
@@ -127,72 +89,11 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
- mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),menu = mymainmenu })
+mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
+                                     menu = mymainmenu })
 -- }}}
 
-
--- Initialize widget
 -- {{{ Wibox
-
--- Network usage widget
-netwidget = widget({ type = "textbox"})
-separator = widget({ type = "textbox"})
-separator.text = " :: "
-dnicon = widget({ type = "imagebox" })
-upicon = widget({ type = "imagebox" })
-dnicon.image = image(beautiful.widget_netdown)
-upicon.image = image(beautiful.widget_netup)
-
-
--------- round ()
-function round(num, idp)
-	if (num~=nil) then
-		local mult = 10^(idp or 0)
-		return math.floor(num * mult * 0.5) / mult
-	else
-		return 0
-	end
-end
-
--- Register widget #7F9F7F
-vicious.register(netwidget, vicious.widgets.net, '<span color="#6699FF">${wlan0 up_kb}</span> <span color="#CC9393">${wlan0 down_kb}</span>', 3)
-
-
----------- wlan downstream
---netwidget = widget({type = "textbox"})
---vicious.register(netwidget, vicious.widges.net,round(args["{wlan0 down_kb}"], 0) .. "kb", 3)
---netwidget.width = space
---
---neticon = widget({ type = "imagebox" })
---neticon.image = image(icons .. "net_down_01.png")
-
-
----------- wlan widget
---wlanicon = widdge({ type ="imagebox" })
---wlanicon.image = image(icons .. "wifi_01.png")
---
---wlanwidget = widget({ type = "textbox" })
---
---wlanwidget_t = awful.tooltip({objects = { wlanicon },})
---
---vicious.register(wlanwidget, vicious.widgets.wifi,
---function (widget, args)
---	if (not assert(args["{link}"]) or (args["{link}"] == 0)) then
---		netwidget.width = 0
---		netwidget.visible = false
---		neticon.visible = false
---		return "off"
---	else
---		netwidget.width = space
---		netwidget.visible = true
---		neticon.visible = true
---
---		wlanwidget_t:set_text(
---		"<span color='" .. white .. "'> SSID: </span>" .. "<span color='" .. black .. "'>" .. args["{ssid}"] .. " </span>\n" .. "span color='" .. white .. "'> Chan: </span>" .. "<span color='" .. black .. "'>" .. args["{chan}"] .. " </span>")
---		return round(((args["{link}"] *100) / 70), 0) .. "%"
---	end
---end, 10, "wlan0")
---wlanwidget.width = space
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
 
@@ -264,21 +165,19 @@ for s = 1, screen.count() do
                                           end, mytasklist.buttons)
 
     -- Create the wibox
-    mywibox[s] = awful.wibox({ position = "top", height = "16", screen = s })
+    mywibox[s] = awful.wibox({ position = "top", screen = s })
     -- Add widgets to the wibox - order matters
     mywibox[s].widgets = {
         {
-            --mylauncher,
+            mylauncher,
             mytaglist[s],
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
         },
         mylayoutbox[s],
         mytextclock,
-		separator,
-		dnicon,netwidget, upicon,
         s == 1 and mysystray or nil,
-        --mytasklist[s],
+        mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
 end
@@ -349,16 +248,7 @@ globalkeys = awful.util.table.join(
                   mypromptbox[mouse.screen].widget,
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
-              end),
-
-	-- Multimedia keys
-	awful.key({ }, "XF86AudioRaiseVolume", function()
-		awful.util.spawn("amixer -q sset Master 2dB+") end),
-	awful.key({ }, "XF86AudioLowerVolume", function()
-		awful.util.spawn("amixer -q sset Master 2dB-") end),
-	 awful.key({ }, "XF86AudioMute", function()
-		awful.util.spawn("amixer -q sset Master toggle") end)
-
+              end)
 )
 
 clientkeys = awful.util.table.join(
@@ -381,7 +271,6 @@ clientkeys = awful.util.table.join(
             c.maximized_vertical   = not c.maximized_vertical
         end)
 )
-
 
 -- Compute the maximum number of digit we need, limited to 9
 keynumber = 0
@@ -479,6 +368,6 @@ client.add_signal("manage", function (c, startup)
     end
 end)
 
-client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+--client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+--client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}

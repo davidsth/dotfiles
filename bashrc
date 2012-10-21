@@ -5,7 +5,6 @@
 echo -ne "Today is "; date
 echo -e ""; cal ;
 
-#export PS1="[\t \u \W]\\$ "
 
 force_color_prompt=yes
 
@@ -15,7 +14,9 @@ PS1="\[\e]0;@\h \w\a\]\[\033[1;36m\]┌─[\[\033[0;34m\]\u\[\033[1;36m\]]──
 
 
 if [ -f ~/.bashrc ]; then
-source ~/.Lifehacktweaks
+source ~/.alias
 fi
+
+PATH="${PATH}:/home/lockon/bin"
 
 complete -cf sudo 

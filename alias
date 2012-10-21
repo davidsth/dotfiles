@@ -1,0 +1,7 @@
+alias inst="sudo apt-get install -y"
+alias c="clear"
+alias up="cd .."
+alias home="cd ~"
+alias trash="rm -fr rm -Rf ~/.local/share/Trash"
+alias mkpkg="makepkg -s"
+alias install="sudo pacman -U"
