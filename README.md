@@ -22,10 +22,14 @@ git submodule update
 </pre>
 
 Create symmlinks:
+<pre>
 ln -s ~/dotfiles/bashrc ~/.bashrc
 ln -s ~/dotfiles/Xresources ~/.Xresources
 ln -s ~/dotfiles/alias ~/.alias
 ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/vim ~/.vim
 ln -s ~/dotfiles/config ~/.config
+</pre>
+
+
 
