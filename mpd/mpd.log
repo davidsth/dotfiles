@@ -1,0 +1,4 @@
+Dec 06 13:13 : avahi: Failed to create client: Daemon not running
+Dec 06 13:13 : added /Battle_is_One.mp3
+Dec 13 09:28 : avahi: Failed to create client: Daemon not running
+Dec 13 09:28 : mixer: Failed to read mixer for 'my audio': no such mixer control: PCM

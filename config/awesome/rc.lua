@@ -93,7 +93,7 @@ layouts =
 -- Define a tag table which hold all screen tags.
 tags = {
 	names	= { "main", "web", "dev", "home", "msg"},
-	layout	= { layouts[11],layouts[11],layouts[8],layouts[8],layouts[2]},
+	layout	= { layouts[11],layouts[11],layouts[8],layouts[8],layouts[8]},
 	icons	= { nil, icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png"}
 }
 
