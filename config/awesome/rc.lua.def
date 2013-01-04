@@ -40,28 +40,10 @@ end
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/home/lockon/.config/awesome/themes/default/theme.lua")
 
--- colors
-blue = "#426797"
-white = "#ffffff"
-black = "#0a0a0b"
-red = "#ea3da3"
-green = "#16a712"
-grey = "#6d7c80"
-
--- paths
-icons		= "/home/lockon/.config/awesome/icons/newblue/"
-bgicons	= "/home/lockon/.config/awesome/icons/menu/"
-
-
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
-browser = "firefox"
-fm = "pcmanfm"
-editor = os.getenv("EDITOR") or "vim"
+editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
-
--- alias
---exec = awful.util.spawn
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -83,6 +65,7 @@ local layouts =
     awful.layout.suit.spiral,
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
+    awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier
 }
 -- }}}
@@ -97,22 +80,10 @@ end
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
-tags = {
-		names 	= { "main", "web", "dev", "home", "msg"},
-		layout	= { layouts[1],layouts[1],layouts[8],layouts[8],layouts[2]},
-		icons	= { nil, icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png"}
-}
-
+tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag(tags.names, s, tags.layout)
-   	--tags[s] = awful.tag({1,2,3,4,5},s,layouts[1])
-
-	if tagseparator then
-		for i, t in ipairs(tags[s]) do
-			awful.tag.seticon(tags.icons[i], t)
-		end
-	end
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
 -- }}}
 
@@ -207,7 +178,7 @@ for s = 1, screen.count() do
     mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
     -- Create the wibox
-    mywibox[s] = awful.wibox({ position = "top", height = "16", screen = s })
+    mywibox[s] = awful.wibox({ position = "top", screen = s })
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()

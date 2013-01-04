@@ -1,11 +1,6 @@
 [window]
-<<<<<<< HEAD
-w = 802
-h = 609
-=======
 w = 993
 h = 718
->>>>>>> 80aa4be2835f1b70dc147cd9d851c275af3d778e
 toolbar = True
 statusbar = True
 thumbpane = True
