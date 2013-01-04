@@ -5,6 +5,8 @@ Feel free to tell me if something doesn't work properly.
 You can probably see, most of the symm linking and other commands
 can just be put in a script file to automate the process.
 You can do that if you want to if that's convinient for you.
+Also, for rc.lua and theme.lua, don't forget to change the username
+to yours.
 
 Take these steps to synchronise it into another(your) computer:
 <pre>
