@@ -1,8 +1,9 @@
-"call pathogen#runtime_append_all_bundles()
-"!call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 "call pathogen#infect()
 
 filetype plugin on
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent

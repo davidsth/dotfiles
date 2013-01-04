@@ -55,7 +55,7 @@ URxvt*boldFont:		xft:Tewi:size=11:antialias=false
 !URxvt*font:       xft:ProggyCleanTT:size=12:antialias=false
 !urxvt*font:     -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 
-urxvt*geometry:         86x30
+urxvt*geometry:         80x30
 urxvt*depth:            28
 urxvt*transparent:      false
 urxvt*internalBorder:  	1 

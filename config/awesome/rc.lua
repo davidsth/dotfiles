@@ -98,9 +98,15 @@ end
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
+<<<<<<< HEAD
 		names 	= { "main", "web", "dev", "home", "msg"},
 		layout	= { layouts[1],layouts[1],layouts[8],layouts[8],layouts[2]},
 		icons	= { nil, icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png"}
+=======
+	names	= { "main", "web", "dev", "home", "msg"},
+	layout	= { layouts[11],layouts[11],layouts[8],layouts[8],layouts[8]},
+	icons	= { nil, icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png"}
+>>>>>>> 80aa4be2835f1b70dc147cd9d851c275af3d778e
 }
 
 for s = 1, screen.count() do
