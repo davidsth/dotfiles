@@ -11,9 +11,10 @@ set number
 set nocompatible
 set laststatus=2
 set encoding=utf-8
+set clipboard=unnamed
 syntax on
 
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 highlight MatchParen cterm=none ctermbg=white ctermfg=black
 highlight LineNr cterm=none ctermbg=none ctermfg=darkgrey
 highlight ErrorMsg cterm=none ctermfg=red ctermfg=black
