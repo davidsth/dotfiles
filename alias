@@ -1,9 +1,7 @@
-alias inst="sudo apt-get install -y"
 alias c="clear"
-alias up="cd .."
-alias home="cd ~"
-alias trash="rm -fr rm -Rf ~/.local/share/Trash"
-alias mkpkg="makepkg -s"
-alias install="sudo pacman -U"
+#alias lockfile="chmod -rx"
+alias unlockfile="chmod +rx"
+alias sudo="sudo -E"
+alias sprunge="curl -F 'sprunge=<-' sprunge.us"
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' \
 -e 's/^/ /' -e 's/-/|/'"

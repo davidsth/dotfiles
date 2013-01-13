@@ -6,42 +6,44 @@
 
 ! Xcursor --------------------------------------------------------------------
 
-Xcursor*theme:  Vanilla-DMZ
-Xcursor.size:   22
+Xcursor*theme:  Neutral_Plus
+Xcursor.size:   16
 
 
 ! terminal colors ------------------------------------------------------------
 
-! A tango-esque light theme
 
 *foreground:#AFBCCC
-*background:#191C1F
+!*background:#191C1F
 
 !black
-*color0:    #1B1D1E
+*color0:    #22262e
 *color8:    #505354
 !red
-*color1:    #F92672
-*color9:    #FF669D
+*color1:    #B86E94
+*color9:    #D087A4
 !green
-*color2:    #A6E22E
-*color10:   #BEED5F
+*color2:    #99C36F
+*color10:   #A7CC82
 !yellow
-*color3:    #FD971F
+*color3:    #DFD11D
 *color11:   #E6DB74
 !blue
 *color4:    #5280D1
 *color12:	#75BAFF   
 !#66D9EF
 !magenta
-*color5:    #9E6FFE
-*color13:   #9E6FFE
-!cyan
-*color6:    #5E7175
-*color14:   #A3BABF
+*color5:    #826EA9
+*color13:   #BCAEDA
+!cyan d5e9ec
+*color6:    #8D849F
+*color14:   #D2C3F2
 !white
-*color7:    #CCCCC6
+*color7:    #DDE9F0
 *color15:   #F8F8F2
+
+! xft 
+xft*dpi:    89
 
 
 ! rxvt-unicode ---------------------------------------------------------------
@@ -50,35 +52,28 @@ Xcursor.size:   22
 URxvt*font:			xft:Tewi:pixelsize=11:antialias=false
 !URxvt*imFont:		xft:Monaco for Powerline:regular:size=8
 URxvt*boldFont:		xft:Tewi:size=11:antialias=false
-!URxvt*italicFont:	xft:Monaco for Powerline:italic:size=8
-!URxvt*boldItalicFont: xft:Monaco for Powerline:bold:italic:size=8
+!URxvt*Font:	xft:Monaco for Powerline:italic:size=8
 !URxvt*font:       xft:ProggyCleanTT:size=12:antialias=false
 !urxvt*font:     -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 
 urxvt*geometry:         80x30
-urxvt*depth:            28
+!urxvt*depth:            28
 urxvt*transparent:      false
 urxvt*internalBorder:  	1 
-urxvt*fading:           0
-urxvt*shading:          10
-urxvt*tintColor:        #000000
 !urxvt*cursorColor:		#2C44B0
 urxvt*cursorColor:      #FD971F
+urxvt*cursorBlink:      false
 urxvt*inheritPixmap:    false
 urxvt*saveLines:        10000
 urxvt*visualBell:       false
-urxvt*scrollTtyKeypress:true
 urxvt*scrollWithBuffer: false
-urxvt*scrollTtyOutput:  false
 urxvt*scrollBar:        false
-urxvt*loginShell:       true
 urxvt*cutchars:         "()*,<>[]{}|"
 urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
-urxvt*secondaryScroll:  true
 urxvt*mapAlert:         true
 urxvt*utmpInhibit:      true
 urxvt*perl-lib:         /usr/lib/urxvt/perl/
 urxvt*perl-ext-common:  option-popup,matcher
-urxvt*urlLauncher:      /usr/bin/firefox
+urxvt*url-launcher:      /usr/bin/firefox
 urxvt*matcher.button:   1
 urxvt*background:      rgba:2222/2222/2222/dddd

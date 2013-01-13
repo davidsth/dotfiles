@@ -38,7 +38,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/lockon/.config/awesome/themes/default/theme.lua")
+beautiful.init("/home/lockon/.config/awesome/themes/theme.lua")
 
 -- colors
 blue = "#426797"
@@ -49,7 +49,7 @@ green = "#16a712"
 grey = "#6d7c80"
 
 -- paths
-icons		= "/home/lockon/.config/awesome/icons/newblue/"
+newblue		= "/home/lockon/.config/awesome/icons/newblue/"
 bgicons	= "/home/lockon/.config/awesome/icons/menu/"
 
 
@@ -99,20 +99,19 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
 		names 	= { "main", "web", "dev", "home", "msg"},
-		layout	= { layouts[1],layouts[1],layouts[8],layouts[8],layouts[2]},
-		icons	= { nil, icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png", icons .. "arrow.png"}
+		layout	= { layouts[1],layouts[1],layouts[1],layouts[1],layouts[1]},
+		icons	= { nil, newblue .. "arrow.png", newblue .. "arrow.png", newblue .. "arrow.png", newblue .. "arrow.png"}
 }
 
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag(tags.names, s, tags.layout)
-   	--tags[s] = awful.tag({1,2,3,4,5},s,layouts[1])
 
-	if tagseparator then
-		for i, t in ipairs(tags[s]) do
-			awful.tag.seticon(tags.icons[i], t)
-		end
+	--if tagseparator then
+	for i, t in ipairs(tags[s]) do
+		awful.tag.seticon(tags.icons[i], t)
 	end
+--	end
 end
 -- }}}
 
@@ -130,8 +129,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+mylauncher = awful.widget.launcher({ menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -139,7 +137,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("%a %b %d, %I:%M %p ")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -211,7 +209,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    left_layout:add(mylauncher)
+    --left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
@@ -297,6 +295,14 @@ globalkeys = awful.util.table.join(
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
               end),
+
+    -- Multimedia keys
+    awful.key({ }, "XF86AudioRaiseVolume", function()
+        awful.util.spawn("amixer -q sset Master 2dB+") end),
+    awful.key({ }, "XF86AudioLowerVolume", function()
+        awful.util.spawn("amixer -q sset Master 2dB-") end),
+    awful.key({ }, "XF86AudioMute", function()
+        awful.util.spawn("amixer -q sset Master toggle") end),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end)
 )

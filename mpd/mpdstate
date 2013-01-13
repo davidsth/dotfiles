@@ -1,10 +1,9 @@
-sw_volume: 100
+sw_volume: 93
 audio_device_state:1:my audio
-state: pause
+state: stop
 current: 0
-time: 26
 random: 0
-repeat: 0
+repeat: 1
 single: 0
 consume: 0
 crossfade: 0
