@@ -5,5 +5,5 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 if [[ -z $DISPLAY ]]; then 
-	startx
+	exec startx
 fi

@@ -49,10 +49,12 @@ xft*dpi:    89
 ! rxvt-unicode ---------------------------------------------------------------
 
 !for normal X11 fonts:
-URxvt*font:			xft:Tewi:pixelsize=11:antialias=false
-!URxvt*imFont:		xft:Monaco for Powerline:regular:size=8
-URxvt*boldFont:		xft:Tewi:size=11:antialias=false
-!URxvt*Font:	xft:Monaco for Powerline:italic:size=8
+!URxvt*font:			xft:Tewi:pixelsize=11:antialias=false
+!URxvt*boldFont:		xft:Tewi:size=11:antialias=false
+
+URxvt*font:         xft:Consolas:regular:size=9
+URxvt*boldFont:     xft:Consolas:bold:size=9
+
 !URxvt*font:       xft:ProggyCleanTT:size=12:antialias=false
 !urxvt*font:     -*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 

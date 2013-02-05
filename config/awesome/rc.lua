@@ -99,7 +99,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
 		names 	= { "main", "web", "dev", "home", "msg"},
-		layout	= { layouts[1],layouts[1],layouts[1],layouts[1],layouts[1]},
+		layout	= { layouts[1],layouts[1],layouts[2],layouts[1],layouts[1]},
 		icons	= { nil, newblue .. "arrow.png", newblue .. "arrow.png", newblue .. "arrow.png", newblue .. "arrow.png"}
 }
 
@@ -124,10 +124,14 @@ myawesomemenu = {
    { "quit", awesome.quit }
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
+
+mymainmenu = awful.menu({ 
+    items = { 
+        { "awesome", myawesomemenu, beautiful.awesome_icon },
+        { "open terminal", terminal },
+        { "File Manager", fm }
+    }
+})
 
 mylauncher = awful.widget.launcher({ menu = mymainmenu })
 
@@ -391,8 +395,8 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { tag = tags[1][2] } },
+    { rule = { class = "Firefox" },
+      properties = { tag = tags[1][2] } },
 }
 -- }}}
 

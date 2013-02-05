@@ -3,7 +3,7 @@
 #
 #----------------------------------------------------------------------------
 echo -ne "Today is "; date
-echo -e ""; cal ;
+#echo -e ""; cal ;
 
 
 force_color_prompt=yes
