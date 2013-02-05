@@ -33,7 +33,7 @@ set laststatus=2
 set encoding=utf-8
 set clipboard=unnamed
 syntax on
-"color jellybeans
+color jellybeans
 
 let g:Powerline_symbols = 'fancy'
 highlight MatchParen cterm=none ctermbg=white ctermfg=black
