@@ -1,6 +1,6 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-call pathogen#infect()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
+"call pathogen#infect()
 
 "filetype plugin on
 
@@ -14,7 +14,10 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " repos on github
-"Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'vim-scripts/ctags.vim'
+
 
 filetype plugin indent on
 
@@ -30,7 +33,7 @@ set laststatus=2
 set encoding=utf-8
 set clipboard=unnamed
 syntax on
-color jellybeans
+"color jellybeans
 
 let g:Powerline_symbols = 'fancy'
 highlight MatchParen cterm=none ctermbg=white ctermfg=black
