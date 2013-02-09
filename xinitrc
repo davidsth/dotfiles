@@ -12,7 +12,8 @@ feh --bg-fill ~/Pictures/Abstract/wallpaper-69099.jpg
 compton --config ~/.compton.conf -b
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-exec awesome
+#exec ck-launch-session awesome
+exec dbus-launch awesome
 # exec gnome-session
 # exec startkde
 # exec startxfce4

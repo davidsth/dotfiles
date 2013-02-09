@@ -1,12 +1,11 @@
 ###Backup of my dotfiles
 ----
-I've tried my best to make this work out of the box. 
 Most of the symm linking and other commands
 can just be put in a script file to automate the process.
 Also, for rc.lua and theme.lua, don't forget to change the username.
 
 
-Take these steps to synchronise it into another(your) computer:
+To fork:
 <pre>
 git clone http://github.com/username/dotfiles.git ~/dotfiles
 </pre>
@@ -71,3 +70,8 @@ git commit -m "added fuigitive as submodule"
 </pre>
 ----
 
+#Screenshot
+---
+![ScreenShot](https://github.com/fmazon3/dotfiles/tree/master/screenshots/jan_25_2013.png)
+
+----
