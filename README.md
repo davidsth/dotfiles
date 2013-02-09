@@ -72,6 +72,6 @@ git commit -m "added fuigitive as submodule"
 
 #Screenshot
 ---
-![ScreenShot](https://github.com/fmazon3/dotfiles/tree/master/screenshots/jan_25_2013.png)
+.. image:: https://github.com/fmazon3/dotfiles/tree/master/screenshots/jan_25_2013.png
 
 ----
