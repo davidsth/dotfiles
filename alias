@@ -1,5 +1,6 @@
 alias ls="ls --color=auto"
 alias c="clear"
+alias rm="rm -i"
 alias unlockfile="chmod +rx"
 alias sudo="sudo -E"
 alias sprunge="curl -F 'sprunge=<-' sprunge.us"

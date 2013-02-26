@@ -124,12 +124,29 @@ myawesomemenu = {
    { "quit", awesome.quit }
 }
 
+myutilsmenu = {
+    { "gimp", "gimp" },
+    { "office", "libreoffice" },
+    { "theme manager", "lxappearance" },
+    { "Sublime", "subl"}
+}
+
+mygoodbyemenu = {
+    { "Suspend", "pm-suspend" },
+    { "Restart", "shutdown -r now" },
+    { "Shutdown", "shutdown -h now" }
+}
+
+
+
 
 mymainmenu = awful.menu({ 
     items = { 
+        { "file manager", fm },
+        { "utils", myutilsmenu},
         { "awesome", myawesomemenu, beautiful.awesome_icon },
-        { "open terminal", terminal },
-        { "File Manager", fm }
+        { "terminal", terminal },
+        { "Goodbye", mygoodbyemenu, beautiful.awesome_icon }
     }
 })
 
@@ -394,9 +411,18 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    -- Set Firefox to always map on tags number 2 of screen 1.
+
+    -- Set Firefox to always map on tag2 of screen 1.
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2] } },
+
+    -- Set Pidgin to always map on tag 5 of screen 1.
+    { rule = { class = "Pidgin" },
+      properties = { tag = tags[1][5] } },
+
+    -- Set Steam to always map on tag 1 of screen 1.
+    { rule = { class = "Steam" },
+      properties = { tag = tags[1][1] } },
 }
 -- }}}
 
