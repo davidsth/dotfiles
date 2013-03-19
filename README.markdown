@@ -60,7 +60,7 @@ Icon Theme: Faenza Ambience
 the icon variants with lxapperance).
 
 ----
-###Adding new submodules to vim
+###Adding new submodules to vim (deprecated. Use vundle)
 This step is a bit confusing as I keep forgetting it. So a memo:
 <pre>
 git submodule add http://github.com/tpope/vim-fugitive.git vim/bundle/vim-fugitive
