@@ -3,6 +3,7 @@ alias c="clear"
 alias rm="rm -i"
 alias unlockfile="chmod +rx"
 alias sudo="sudo -E"
+alias pacman='PACMAN=/usr/bin/pacman; [ -f /usr/bin/pacman-color ] && PACMAN=/usr/bin/pacman-color; $PACMAN $@'
 alias sprunge="curl -F 'sprunge=<-' sprunge.us"
 alias monitorcpu="watch grep \"cpu MHz\" /proc/info"
 #alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' \
