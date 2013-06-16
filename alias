@@ -1,11 +1,11 @@
 alias ls="ls --color=auto"
 alias c="clear"
 alias rm="rm -i"
-alias unlockfile="chmod +rx"
 alias sudo="sudo -E"
-alias pacman='PACMAN=/usr/bin/pacman; [ -f /usr/bin/pacman-color ] && PACMAN=/usr/bin/pacman-color; $PACMAN $@'
+alias cleanvar="pacman -Scc"
+#alias pacman="PACMAN=/usr/bin/pacman; [ -f /usr/bin/pacman-color ] && PACMAN=/usr/bin/pacman-color; $PACMAN $@"
 alias sprunge="curl -F 'sprunge=<-' sprunge.us"
-alias monitorcpu="watch grep \"cpu MHz\" /proc/info"
-#alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' \
-#-e 's/^/ /' -e 's/-/|/'"
-#rsync -rv --ignore-existing -e ssh -p5548 xbmc@192.168.1.3:Torrents/Gentoomen\ Library/ Books/Gentoomen%20Library/
+alias monitorcpu="watch grep \"cpu MHz\" /proc/cpuinfo"
+#alias sshnoprofile="ssh -t /bin/sh"
+#alias sync-gentoomen="rsync -rv --ignore-existing -e ssh -p5548 xbmc@192.168.1.3:Torrents/Gentoomen\ Library/ Books/Gentoomen%20Library/"
+alias pyenv="source ~/workspace/ENV/bin/activate"
