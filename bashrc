@@ -28,3 +28,6 @@ PATH="${PATH}:/home/lockon/bin"
 
 source /usr/share/doc/pkgfile/command-not-found.bash
 complete -cf sudo 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm

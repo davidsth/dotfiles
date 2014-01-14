@@ -12,38 +12,34 @@ Xcursor.size:   16
 
 ! terminal colors ------------------------------------------------------------
 
-
 *foreground:#AFBCCC
-!*background:#191C1F
+*background:#191C1F
 
 !black
-*color0:    #22262e
-*color8:    #505354
+*color0: #22262e
+*color8: #505354
 !red
-*color1:    #B86E94
-*color9:    #D087A4
+*color1: #B86E94
+*color9: #D087A4
 !green
-*color2:    #99C36F
-*color10:   #A7CC82
+*color2: #99C36F
+*color10: #A7CC82
 !yellow
-*color3:    #DFD11D
-*color11:   #E6DB74
+*color3: #DFD11D
+*color11: #E6DB74
 !blue
-*color4:    #5280D1
-*color12:	#75BAFF   
+*color4: #5280D1
+*color12:#75BAFF
 !#66D9EF
 !magenta
-*color5:    #826EA9
-*color13:   #BCAEDA
+*color5: #826EA9
+*color13: #BCAEDA
 !cyan d5e9ec
-*color6:    #8D849F
-*color14:   #D2C3F2
+*color6: #8D849F
+*color14: #D2C3F2
 !white
-*color7:    #DDE9F0
-*color15:   #F8F8F2
-
-! xft 
-xft*dpi:    89
+*color7: #DDE9F0
+*color15: #F8F8F2
 
 
 ! rxvt-unicode ---------------------------------------------------------------
@@ -52,14 +48,16 @@ xft*dpi:    89
 !URxvt*font:			xft:Tewi:pixelsize=11:antialias=false
 !URxvt*boldFont:		xft:Tewi:size=11:antialias=false
 
-!URxvt*font:         xft:Consolas:regular:size=9
-!URxvt*boldFont:     xft:Consolas:bold:size=9
-
+URxvt*font:         xft:Consolas:regular:pixelsize=12:antialias=true:autohint=true
+URxvt*boldFont:     xft:Consolas:bold:pixelsize=12:antialias=true:autohint=true
+URxvt*letterSpace:  -1
 !URxvt*font:        xft:ProggyCleanTT:size=12:antialias=false
-URxvt*font:	    xft:Terminus:pixelsize=9:antialias=false
-URxvt*boldFont:	    xft:Terminus:pixelsize=9:antialias=false
+!URxvt*font:	    xft:Terminus:pixelsize=9:antialias=false
+!URxvt*boldFont:	    xft:Terminus:pixelsize=9:antialias=false
+!---------------------------------------------------------------
+!xterm*faceName:	    Terminus:pixelsize=9:antialias=false
 
-urxvt*geometry:         80x30
+urxvt*geometry:         76x28
 !urxvt*depth:            28
 urxvt*transparent:      false
 urxvt*internalBorder:  	1 

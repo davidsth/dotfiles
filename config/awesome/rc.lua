@@ -283,7 +283,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
     awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
     awful.key({ modkey,           }, "Tab",
-        function ()
+            function ()
             awful.client.focus.history.previous()
             if client.focus then
                 client.focus:raise()
@@ -336,6 +336,11 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",
+    -- titlebar toggle
+    --awful.key({modkey, }, "t", function(c)
+    --if c.titlebar then awful.titlebar.remove(c)
+    --else awful.titlebar.add(c, {modkey=modkey}) end 
+    --end),
         function (c)
             -- The client currently has the input focus, so it cannot be
             -- minimized, since minimized clients can't have the focus.
@@ -347,6 +352,8 @@ clientkeys = awful.util.table.join(
             c.maximized_vertical   = not c.maximized_vertical
         end)
 )
+
+
 
 -- Compute the maximum number of digit we need, limited to 9
 keynumber = 0
@@ -405,14 +412,11 @@ awful.rules.rules = {
                      focus = awful.client.focus.filter,
                      keys = clientkeys,
                      buttons = clientbuttons } },
-    { rule = { class = "MPlayer" },
+    
+    { rule = { class = "MPlayer", "pinetry", "gimp" },
       properties = { floating = true } },
-    { rule = { class = "pinentry" },
-      properties = { floating = true } },
-    { rule = { class = "gimp" },
-      properties = { floating = true } },
-
-    -- Set Firefox to always map on tag2 of screen 1.
+    
+      -- Set Firefox to always map on tag2 of screen 1.
     { rule = { class = "Firefox" },
       properties = { tag = tags[1][2] } },
 
@@ -449,7 +453,7 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = false
+    local titlebars_enabled = true
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- Widgets that are aligned to the left
         local left_layout = wibox.layout.fixed.horizontal()
