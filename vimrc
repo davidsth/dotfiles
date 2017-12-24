@@ -1,6 +1,8 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
+filetype off
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 "let Vundle manage Vundle
 "to install bundle:
 "  :BundleInstall
@@ -15,10 +17,12 @@ Bundle 'gmarik/vundle'
 "
 " repos on github
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'nanotech/jellybeans.vim'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'scrooloose/syntastic'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
+call vundle#end()
 
 " default indentations: 4 spaces
 set tabstop=4
@@ -32,7 +36,6 @@ set laststatus=2
 set hidden
 set clipboard=unnamed
 syntax on
-colorscheme jellybeans
 set encoding=utf-8
 set listchars=tab:▸\ ,eol:¬
 set list
@@ -61,7 +64,7 @@ command! W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 
 
 " my custom highlights 
-"let g:Powerline_symbols = 'fancy'
+let g:airline#extensions#tabline#enabled = 1
 highlight MatchParen cterm=none ctermbg=white ctermfg=black
 highlight LineNr cterm=none ctermbg=none ctermfg=darkgrey
 highlight ErrorMsg cterm=none ctermfg=red ctermfg=black
