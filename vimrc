@@ -24,9 +24,9 @@ Bundle 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
-" default indentations: 4 spaces
-set tabstop=4
-set shiftwidth=4
+" default indentations: 2 spaces
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set smartindent
@@ -43,8 +43,7 @@ set list
 "80 char limit
 set textwidth=80
 set colorcolumn=+1
-hi ColorColumn ctermbg=235
-
+hi ColorColumn ctermbg=235 
 filetype plugin indent on
 
 " Enable file type detection
