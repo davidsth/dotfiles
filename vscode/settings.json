@@ -1,0 +1,83 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "solargraph.commandPath": "C:\\Users\\fm\\Desktop\\solargraph.bat",
+  "workbench.editor.enablePreview": false,
+  "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100,
+  "explorer.confirmDragAndDrop": false,
+  "ruby.rubocop.executePath": "C:\\Users\\fm\\Desktop\\",
+  "ruby.rubocop.useBundler": true,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.views.repositories.files.layout": "list",
+  "prettier.prettierPath": "C:\\Users\\fm\\Desktop\\prettier.bat",
+  "files.associations": {
+    "*.html.erb": "html",
+    "*.erb": "erb"
+  },
+  "ruby.rubocop.onSave": true,
+  "editor.formatOnSaveTimeout": 5000,
+  "editor.formatOnSave": true,
+  "rufo.exe": "C:\\Users\\fm\\Desktop\\rufo.bat",
+  "rufo.useBundler": true,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": [
+    "#0273B8",
+    "#ffffff"
+  ],
+  "vim.statusBarColors.insert": "#399273",
+  "vim.statusBarColors.visual": "#C68225",
+  "vim.statusBarColors.visualline": "#C68225",
+  "vim.statusBarColors.visualblock": "#C68225",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#F38A14",
+    "statusBar.background": "#0273B8",
+    "statusBar.noFolderBackground": "#0273B8",
+    "statusBar.debuggingBackground": "#0273B8",
+    "statusBar.foreground": "#ffffff"
+  },
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.visual": "block",
+  "vim.cursorStylePerMode.visualblock": "block",
+  "vim.cursorStylePerMode.visualline": "block",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "Z",
+        "Z"
+      ],
+      "commands": [
+        ":wq"
+      ]
+    },
+    {
+      "before": [
+        "Z",
+        "Q"
+      ],
+      "commands": [
+        ":q!"
+      ]
+    }
+  ],
+  "editor.lineNumbers": "relative",
+  "vim.cursorStylePerMode.replace": "block",
+  "vim.commandLineModeKeyBindingsNonRecursive": [],
+  "editor.tabSize": 2,
+}
